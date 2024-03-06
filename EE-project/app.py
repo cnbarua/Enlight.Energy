@@ -24,7 +24,12 @@ def login():
 @app.route("/tasks", methods=['GET'])
 def tasks():
     return render_template('tasks.html')
-        
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    return redirect(url_for('home'))
+
 if __name__ == '__main__':
     app.run(debug=True)
 
