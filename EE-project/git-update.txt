@@ -1,0 +1,5 @@
+git status
+git add .
+git commit -m "Update mm/dd/yy"
+git push --set-upstream origin master
+git status
