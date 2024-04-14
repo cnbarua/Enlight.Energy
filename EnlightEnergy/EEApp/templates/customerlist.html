@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <title>Enlight Energy Customer List</title>
+
+</head>
+<body>
+<h2>Hello {{Author}}</h2>
+<hr>
+<h3>Los clientes guardados son:</h3>
+{% if customers %}
+<ul>
+    {% for cust in customers %}
+    <li> <B>{{ cust.cus_code }} 
+            {{ cust.name }} 
+            {{ cust.email }} 
+            {{ cust.address }} 
+            {{ cust.state }}
+            {{ cust.zipcode }}
+            {{ cust.phone }}
+        </B> </li>
+    {% endfor %}
+</ul>
+{% endif %}
+</body>
+</html>
